@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat [S]</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #chat-container { max-width: 500px; margin: auto; padding: 10px; border: 1px solid #ddd; }
+    #room-selection { margin-bottom: 10px; }
+    #messages { list-style-type: none; padding: 0; margin-bottom: 10px; border: 1px solid #ddd; height: 300px; overflow-y: scroll; }
+    #messages li { padding: 8px; margin-bottom: 4px; background: #f1f1f1; }
+    #form { display: flex; }
+    #input { flex: 1; padding: 10px; }
+    #send-button { padding: 10px; }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="room-selection">
+      <input id="room-input" placeholder="Enter room name" />
+      <button id="join-room-button">Join Room</button>
+    </div>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" placeholder="Type a message..." />
+      <button id="send-button">Send</button>
+    </form>
+  </div>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
